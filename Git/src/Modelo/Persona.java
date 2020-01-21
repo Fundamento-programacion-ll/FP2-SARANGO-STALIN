@@ -8,7 +8,7 @@ package Modelo;
 
 /**
  * 
- * @author <sguergachi at gmail.com>
+ * @author ASUS
  */
 public class Persona {
     

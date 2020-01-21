@@ -8,7 +8,7 @@ package Controlador;
 
 /**
  * 
- * @author  <sguergachi at gmail.com>
+ * @author  ASUS
  */
 public class User {
 

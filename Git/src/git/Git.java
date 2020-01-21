@@ -7,10 +7,9 @@ package git;
 
 import Modelo.Persona;
 
-
 /**
  *
- * @author <sguergachi at gmail.com>
+ * @author SISTEMAS CORP
  */
 public class Git {
 
@@ -18,13 +17,15 @@ public class Git {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-       
-        Persona stalin = new Persona ("Stalin", "Sarango", 0, 0, 0, "la41", 'm', true);
-        
-        
+        // TODO code application logic here
+        Persona Stalin = new 
+        Persona("Stalin", "Sarango", "22005111", 
+                24, 
+                "222222", "la 41", 'm', true);
+        Persona orlando = new Persona("kevin", "jimenez", "0", 0, "0", "la 41", 'm', true);
+        Persona jimenez = new Persona("Stalin", "Sarango", "0", 0, "0", "la 41", 'm', true);
+        System.out.println(Stalin);
         
     }
-    @Override
-    public string 
+    
 }
