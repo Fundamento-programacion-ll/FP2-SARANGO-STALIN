@@ -22,8 +22,8 @@ public class Git {
         Persona("Stalin", "Sarango", "22005111", 
                 24, 
                 "222222", "la 41", 'm', true);
-        Persona orlando = new Persona("kevin", "jimenez", "0", 0, "0", "la 41", 'm', true);
-        Persona jimenez = new Persona("Stalin", "Sarango", "0", 0, "0", "la 41", 'm', true);
+        Persona orlando = new Persona("kevin", "jimenez", "0", 0, "0", "dorado", 'm', true);
+        Persona jimenez = new Persona("Stalin", "Sarango", "0", 0, "0", "dorado", 'm', true);
         System.out.println(Stalin);
         
     }

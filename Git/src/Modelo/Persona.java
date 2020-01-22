@@ -12,97 +12,110 @@ package Modelo;
  */
 public class Persona {
     
-    String nombre= "";
-    String apellidos= "";
-    int cedula;
+ String nombre;
+    String apellidos;
+    String cedula;
     int edad;
-    int telefono;
+    String telefono;
     String direccion;
     char genero;
-    boolean estadocivil;
+    boolean estadoCivil;
 
-    public Persona(int cedula, int edad, int telefono, String direccion, char genero, boolean estadocivil) {
+    public Persona(String nombre, 
+            String apellidos, 
+            String cedula, 
+            int edad, 
+            String telefono, 
+            String direccion, 
+            char genero, 
+            boolean estadoCivil) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
         this.cedula = cedula;
         this.edad = edad;
         this.telefono = telefono;
         this.direccion = direccion;
         this.genero = genero;
-        this.estadocivil = estadocivil;
+        this.estadoCivil = estadoCivil;
     }
 
-    public Persona(String stalin, String sarango, int i, int i0, int i1, String la41, char c, boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    
+    
     public String getNombre() {
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellidos() {
         return apellidos;
     }
 
-    public int getCedula() {
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getCedula() {
         return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public int getEdad() {
         return edad;
     }
 
-    public int getTelefono() {
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getTelefono() {
         return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public String getDireccion() {
         return direccion;
     }
 
-    public char getGenero() {
-        return genero;
-    }
-
-    public boolean isEstadocivil() {
-        return estadocivil;
-    }
-    
-    
-    
-    
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public void setCedula(int cedula) {
-        this.cedula = cedula;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public char getGenero() {
+        return genero;
     }
 
     public void setGenero(char genero) {
         this.genero = genero;
     }
 
-    public void setEstadocivil(boolean estadocivil) {
-        this.estadocivil = estadocivil;
+    public boolean isEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(boolean estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+   
+    
+    @Override
+    public String toString() {
+        return 
+     "nombre:" + this.getNombre();
     }
     
     
     
-
+    
+    
+    
 }
