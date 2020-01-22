@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author SISTEMAS CORP
+ * @author ASUS
  */
 public class Usuario {
 
