@@ -32,3 +32,6 @@ public class numero {
         return result;
     }
 }
+//Instansiar clases 
+//docker= gestion de base de datos/contenedor
+//kitematic
