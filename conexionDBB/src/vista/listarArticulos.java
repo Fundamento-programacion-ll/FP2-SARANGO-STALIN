@@ -25,6 +25,7 @@ public class listarArticulos extends javax.swing.JFrame {
    
     public listarArticulos() {
         initComponents();
+        
     }
 
     /**

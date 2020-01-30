@@ -9,6 +9,7 @@ import conexion.conector;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -38,7 +39,7 @@ public class controladorArticulo {
             System.err.println("error: " + ex);
             JOptionPane
 .showMessageDialog(null, "Error al ingresar datos");
-            //Logger.getLogger(controladorArticulo.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
     }
     
@@ -61,8 +62,7 @@ public class controladorArticulo {
         }
         
         if (tipoBusqueda.equalsIgnoreCase("nombre")) {
-            // SELECT * FROM Customers
-            //WHERE CustomerName LIKE '%mar';
+            
             String sqlSelectID = 
            "select * from articulos where nombre LIKE "+"'%"+valorABuscar+"%'"+"";
             System.out.println(sqlSelectID);
@@ -91,6 +91,22 @@ public class controladorArticulo {
                     System.out.println("precio: "+rs.getFloat(4));
                 }
         }
+    }
+        
+        
+    public ArrayList obtenerDatos() throws SQLException{
+        ArrayList<articulo> listaNombres = new ArrayList<>();        
+        String selectDatos = "select * from articulos";
+        ps = conexion.getConxion().prepareStatement(selectDatos);
+        rs = ps.executeQuery();        
+        while (rs.next()) {            
+            articulo art = new articulo();
+            art.setNombre(rs.getString(2));
+            art.setDescripcion(rs.getString(3));
+            art.setPrecio(rs.getInt(4));
+            listaNombres.add(art);
+        }
+        return listaNombres;
     }
     
 }

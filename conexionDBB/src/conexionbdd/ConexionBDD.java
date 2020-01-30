@@ -29,10 +29,7 @@ public class ConexionBDD {
         conector stringConexion = new conector();
         stringConexion.getConxion();
         articulo nuevoArticulo = new articulo();
-        //nuevoArticulo.setNombre("nintendo");
-        //nuevoArticulo.setDescripcion("mariooo");
-        //nuevoArticulo.setPrecio(250);        
-        // Insert
+       
         
         String select =
             "select * "
@@ -46,8 +43,7 @@ public class ConexionBDD {
             ps.setInt(1, 3);
             rs = ps.executeQuery(); // obtener resultados
             while (rs.next()) {                
-                // 1 id
-                // ver todo lo de id = 2
+              
                 System.out.println(rs.getString(2));
                 System.out.println(rs.getString(3));
                 System.out.println(rs.getFloat(4));
