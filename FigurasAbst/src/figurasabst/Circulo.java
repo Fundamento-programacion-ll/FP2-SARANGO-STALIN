@@ -1,50 +1,62 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package polimorfismo_figura;
+package figurasabst;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Lordbot
- */
-public class Circulo extends Punto{
-    
-    int radio;
+
+public class Circulo extends Punto {
+    private int radio;
+
+    public Circulo() {
+        String radio=JOptionPane.showInputDialog(null,"Ingrese el valor del radio");
+        this.radio=Integer.parseInt(radio);
+    }
+
+    public Circulo(int radio) {
+        this.radio = radio;
+    }
 
     public Circulo(int radio, int x, int y) {
         super(x, y);
         this.radio = radio;
     }
 
-    public double getRadio() {
+    public int getRadio() {
         return radio;
     }
 
     public void setRadio(int radio) {
         this.radio = radio;
     }
+     public double getDiametro() {
 
-    public Circulo(int x, int y) {
-        super(x, y);
+        return 2 * this.radio;
+
     }
 
-    public void Circulo(){
-    
-    int dato = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el Radio", "Círculo", 1));
+    public double getCircunferencia() {
 
-    this.radio = dato;
-    
+        return Math.PI * this.getDiametro();
     }
+    public double getArea() {
 
+        return Math.PI * getRadio() * getRadio();
+
+    }
+    
+    public void paint(Graphics g) {        
+
+        g.setColor(Color.DARK_GRAY);
+
+        g.drawOval(super.getX(), super.getY(), (int) this.radio, (int) this.radio);
+    }
     @Override
+
     public String toString() {
-        return "Circulo{" + "radio=" + this.radio + '}';
+
+        return "\n Circulo" + super.toString() + " \n Radio= " + this.radio;
+
     }
-    
-    
     
 }

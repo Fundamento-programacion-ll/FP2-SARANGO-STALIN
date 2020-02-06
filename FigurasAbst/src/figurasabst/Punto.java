@@ -1,35 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package polimorfismo_figura;
+package figurasabst;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Lordbot
- */
 public class Punto extends Figura{
-    
-    int x;
-    int y;
+    private int x, y;
+
+    public Punto() {
+        super();
+        String datos= JOptionPane.showInputDialog(null, "Ingrese los datos separados por coma");
+        StringTokenizer tokens= new StringTokenizer(datos,",");
+        
+        this.x = Integer.parseInt(tokens.nextToken());
+        this.y = Integer.parseInt(tokens.nextToken());
+    }
 
     public Punto(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-  
-    public int getX() {
+    
+    
+    public int getX(){
         return x;
     }
-
-    public int getY() {
+    
+    public int getY(){
         return y;
     }
 
@@ -40,33 +39,16 @@ public class Punto extends Figura{
     public void setY(int y) {
         this.y = y;
     }
-
+    
     @Override
-    public void Dibujo(Graphics g) {
-        
-        g.setColor(Color.BLACK);
-        
-        System.out.println(this.x+" "+this.y);
-        
-        g.fillOval(this.x, this.y, 30, 30);
-        
+    public void paint (Graphics g) {
+        g.setColor(Color.red);
+        g.fillOval(x, y, 20, 20);
     }
 
     @Override
     public String toString() {
-        return "Punto: [x = "+this.x+" y = "+this.y+"]";
+        return "Puntos: "+"x=" + x + ", y=" + y;
     }
 
-public void Punto(){
-
-String datos = JOptionPane.showInputDialog(null, "Ingrese los elementos separados por (,)");
-        StringTokenizer tokkens=new StringTokenizer(datos,",");
-        
-        this.x = Integer.parseInt(tokkens.nextToken());
-        this.y = Integer.parseInt(tokkens.nextToken());
-
-}
-    
-    
-    
 }
